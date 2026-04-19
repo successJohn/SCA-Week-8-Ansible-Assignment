@@ -1,0 +1,29 @@
+---
+- name: Install apache2
+  ansible.builtin.apt:
+    name: apache2
+    state: present
+    update_cache: yes
+
+- name: Start apache2 and enable on boot
+  ansible.builtin.service:
+    name: apache2
+    state: started
+    enabled: yes
+
+- name: Install standard tools
+  ansible.builtin.apt:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - git
+    - wget
+    - zip
+    - unzip
+
+- name: Deploy custom welcome page
+  ansible.builtin.template:
+    src: index.html.j2
+    dest: /var/www/html/index.html
+    backup: yes
+  notify: Restart apache2

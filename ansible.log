@@ -1,0 +1,317 @@
+2026-04-19 20:59:33,217 p=2534 u=ubuntu n=ansible | pay-web01 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: Warning: Permanently added '172.31.31.123' (ED25519) to the list of known hosts.\r\nec2-user@172.31.31.123: Permission denied (publickey).",
+    "unreachable": true
+}
+2026-04-19 20:59:33,222 p=2534 u=ubuntu n=ansible | pay-web02 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: Warning: Permanently added '172.31.18.49' (ED25519) to the list of known hosts.\r\nec2-user@172.31.18.49: Permission denied (publickey).",
+    "unreachable": true
+}
+2026-04-19 20:59:33,225 p=2534 u=ubuntu n=ansible | pay-db01 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: Warning: Permanently added '172.31.31.132' (ED25519) to the list of known hosts.\r\nec2-user@172.31.31.132: Permission denied (publickey).",
+    "unreachable": true
+}
+2026-04-19 20:59:34,548 p=2534 u=ubuntu n=ansible | [WARNING]: Platform linux on host pay-web03 is using the discovered Python interpreter at
+/usr/bin/python3.10, but future installation of another Python interpreter could change the meaning of
+that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2026-04-19 20:59:34,548 p=2534 u=ubuntu n=ansible | pay-web03 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3.10"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2026-04-19 21:02:59,387 p=2566 u=ubuntu n=ansible | [WARNING]: Platform linux on host pay-web03 is using the discovered Python interpreter at
+/usr/bin/python3.10, but future installation of another Python interpreter could change the meaning of
+that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2026-04-19 21:02:59,389 p=2566 u=ubuntu n=ansible | pay-web03 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3.10"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2026-04-19 21:02:59,664 p=2566 u=ubuntu n=ansible | [WARNING]: Platform linux on host pay-db01 is using the discovered Python interpreter at
+/usr/bin/python3.10, but future installation of another Python interpreter could change the meaning of
+that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2026-04-19 21:02:59,665 p=2566 u=ubuntu n=ansible | pay-db01 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3.10"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2026-04-19 21:02:59,703 p=2566 u=ubuntu n=ansible | [WARNING]: Platform linux on host pay-web02 is using the discovered Python interpreter at
+/usr/bin/python3.10, but future installation of another Python interpreter could change the meaning of
+that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2026-04-19 21:02:59,703 p=2566 u=ubuntu n=ansible | pay-web02 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3.10"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2026-04-19 21:02:59,729 p=2566 u=ubuntu n=ansible | [WARNING]: Platform linux on host pay-web01 is using the discovered Python interpreter at
+/usr/bin/python3.10, but future installation of another Python interpreter could change the meaning of
+that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2026-04-19 21:02:59,729 p=2566 u=ubuntu n=ansible | pay-web01 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3.10"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2026-04-19 21:06:35,590 p=2627 u=ubuntu n=ansible | playbook: pay-api.yaml
+2026-04-19 21:07:09,217 p=2629 u=ubuntu n=ansible | PLAY [Configure pay-api web nodes] ********************************************************************
+2026-04-19 21:07:09,226 p=2629 u=ubuntu n=ansible | TASK [Gathering Facts] ********************************************************************************
+2026-04-19 21:07:11,267 p=2629 u=ubuntu n=ansible | [WARNING]: Platform linux on host pay-web02 is using the discovered Python interpreter at
+/usr/bin/python3.10, but future installation of another Python interpreter could change the meaning of
+that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2026-04-19 21:07:11,268 p=2629 u=ubuntu n=ansible | ok: [pay-web02]
+2026-04-19 21:07:11,295 p=2629 u=ubuntu n=ansible | [WARNING]: Platform linux on host pay-web01 is using the discovered Python interpreter at
+/usr/bin/python3.10, but future installation of another Python interpreter could change the meaning of
+that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2026-04-19 21:07:11,295 p=2629 u=ubuntu n=ansible | ok: [pay-web01]
+2026-04-19 21:07:11,303 p=2629 u=ubuntu n=ansible | [WARNING]: Platform linux on host pay-web03 is using the discovered Python interpreter at
+/usr/bin/python3.10, but future installation of another Python interpreter could change the meaning of
+that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2026-04-19 21:07:11,304 p=2629 u=ubuntu n=ansible | ok: [pay-web03]
+2026-04-19 21:07:11,309 p=2629 u=ubuntu n=ansible | TASK [Install apache2] ********************************************************************************
+2026-04-19 21:07:39,286 p=2629 u=ubuntu n=ansible | changed: [pay-web02]
+2026-04-19 21:07:39,858 p=2629 u=ubuntu n=ansible | changed: [pay-web01]
+2026-04-19 21:07:40,023 p=2629 u=ubuntu n=ansible | changed: [pay-web03]
+2026-04-19 21:07:40,031 p=2629 u=ubuntu n=ansible | TASK [Start apache2 and enable on boot] ***************************************************************
+2026-04-19 21:07:40,887 p=2629 u=ubuntu n=ansible | ok: [pay-web01]
+2026-04-19 21:07:40,894 p=2629 u=ubuntu n=ansible | ok: [pay-web02]
+2026-04-19 21:07:40,898 p=2629 u=ubuntu n=ansible | ok: [pay-web03]
+2026-04-19 21:07:40,904 p=2629 u=ubuntu n=ansible | TASK [Install standard tools] *************************************************************************
+2026-04-19 21:07:42,241 p=2629 u=ubuntu n=ansible | ok: [pay-web02] => (item=git)
+2026-04-19 21:07:42,267 p=2629 u=ubuntu n=ansible | ok: [pay-web01] => (item=git)
+2026-04-19 21:07:42,312 p=2629 u=ubuntu n=ansible | ok: [pay-web03] => (item=git)
+2026-04-19 21:07:43,489 p=2629 u=ubuntu n=ansible | ok: [pay-web02] => (item=wget)
+2026-04-19 21:07:43,514 p=2629 u=ubuntu n=ansible | ok: [pay-web01] => (item=wget)
+2026-04-19 21:07:43,545 p=2629 u=ubuntu n=ansible | ok: [pay-web03] => (item=wget)
+2026-04-19 21:07:49,363 p=2629 u=ubuntu n=ansible | changed: [pay-web03] => (item=zip)
+2026-04-19 21:07:49,417 p=2629 u=ubuntu n=ansible | changed: [pay-web02] => (item=zip)
+2026-04-19 21:07:49,441 p=2629 u=ubuntu n=ansible | changed: [pay-web01] => (item=zip)
+2026-04-19 21:07:50,603 p=2629 u=ubuntu n=ansible | ok: [pay-web03] => (item=unzip)
+2026-04-19 21:07:50,643 p=2629 u=ubuntu n=ansible | ok: [pay-web02] => (item=unzip)
+2026-04-19 21:07:50,678 p=2629 u=ubuntu n=ansible | ok: [pay-web01] => (item=unzip)
+2026-04-19 21:07:50,687 p=2629 u=ubuntu n=ansible | TASK [Deploy custom welcome page] *********************************************************************
+2026-04-19 21:07:51,611 p=2629 u=ubuntu n=ansible | changed: [pay-web01]
+2026-04-19 21:07:51,619 p=2629 u=ubuntu n=ansible | changed: [pay-web02]
+2026-04-19 21:07:51,625 p=2629 u=ubuntu n=ansible | changed: [pay-web03]
+2026-04-19 21:07:51,645 p=2629 u=ubuntu n=ansible | RUNNING HANDLER [Restart apache2] *********************************************************************
+2026-04-19 21:07:52,268 p=2629 u=ubuntu n=ansible | changed: [pay-web01]
+2026-04-19 21:07:52,283 p=2629 u=ubuntu n=ansible | changed: [pay-web02]
+2026-04-19 21:07:52,285 p=2629 u=ubuntu n=ansible | changed: [pay-web03]
+2026-04-19 21:07:52,288 p=2629 u=ubuntu n=ansible | PLAY [Configure pay-api database node] ****************************************************************
+2026-04-19 21:07:52,291 p=2629 u=ubuntu n=ansible | TASK [Gathering Facts] ********************************************************************************
+2026-04-19 21:07:53,941 p=2629 u=ubuntu n=ansible | [WARNING]: Platform linux on host pay-db01 is using the discovered Python interpreter at
+/usr/bin/python3.10, but future installation of another Python interpreter could change the meaning of
+that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2026-04-19 21:07:53,941 p=2629 u=ubuntu n=ansible | ok: [pay-db01]
+2026-04-19 21:07:53,946 p=2629 u=ubuntu n=ansible | TASK [Install mariadb] ********************************************************************************
+2026-04-19 21:08:24,041 p=2629 u=ubuntu n=ansible | changed: [pay-db01]
+2026-04-19 21:08:24,047 p=2629 u=ubuntu n=ansible | TASK [Start mariadb and enable on boot] ***************************************************************
+2026-04-19 21:08:24,572 p=2629 u=ubuntu n=ansible | ok: [pay-db01]
+2026-04-19 21:08:24,573 p=2629 u=ubuntu n=ansible | PLAY RECAP ********************************************************************************************
+2026-04-19 21:08:24,573 p=2629 u=ubuntu n=ansible | pay-db01                   : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-04-19 21:08:24,573 p=2629 u=ubuntu n=ansible | pay-web01                  : ok=6    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-04-19 21:08:24,573 p=2629 u=ubuntu n=ansible | pay-web02                  : ok=6    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-04-19 21:08:24,574 p=2629 u=ubuntu n=ansible | pay-web03                  : ok=6    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-04-19 21:29:02,657 p=2981 u=ubuntu n=ansible | PLAY [Configure pay-api web nodes] *******************************************************************************************************************************************************************************
+2026-04-19 21:29:02,665 p=2981 u=ubuntu n=ansible | TASK [Gathering Facts] *******************************************************************************************************************************************************************************************
+2026-04-19 21:29:04,841 p=2981 u=ubuntu n=ansible | [WARNING]: Platform linux on host pay-web02 is using the discovered Python interpreter at /usr/bin/python3.10, but future installation of another Python interpreter could change the meaning of that path. See
+https://docs.ansible.com/ansible-core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2026-04-19 21:29:04,841 p=2981 u=ubuntu n=ansible | ok: [pay-web02]
+2026-04-19 21:29:04,890 p=2981 u=ubuntu n=ansible | [WARNING]: Platform linux on host pay-web03 is using the discovered Python interpreter at /usr/bin/python3.10, but future installation of another Python interpreter could change the meaning of that path. See
+https://docs.ansible.com/ansible-core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2026-04-19 21:29:04,890 p=2981 u=ubuntu n=ansible | ok: [pay-web03]
+2026-04-19 21:29:04,897 p=2981 u=ubuntu n=ansible | [WARNING]: Platform linux on host pay-web01 is using the discovered Python interpreter at /usr/bin/python3.10, but future installation of another Python interpreter could change the meaning of that path. See
+https://docs.ansible.com/ansible-core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2026-04-19 21:29:04,897 p=2981 u=ubuntu n=ansible | ok: [pay-web01]
+2026-04-19 21:29:04,903 p=2981 u=ubuntu n=ansible | TASK [Install apache2] *******************************************************************************************************************************************************************************************
+2026-04-19 21:29:09,879 p=2981 u=ubuntu n=ansible | ok: [pay-web02]
+2026-04-19 21:29:10,019 p=2981 u=ubuntu n=ansible | ok: [pay-web01]
+2026-04-19 21:29:10,032 p=2981 u=ubuntu n=ansible | ok: [pay-web03]
+2026-04-19 21:29:10,039 p=2981 u=ubuntu n=ansible | TASK [Start apache2 and enable on boot] **************************************************************************************************************************************************************************
+2026-04-19 21:29:10,929 p=2981 u=ubuntu n=ansible | ok: [pay-web03]
+2026-04-19 21:29:10,976 p=2981 u=ubuntu n=ansible | ok: [pay-web02]
+2026-04-19 21:29:10,983 p=2981 u=ubuntu n=ansible | ok: [pay-web01]
+2026-04-19 21:29:10,990 p=2981 u=ubuntu n=ansible | TASK [Install standard tools] ************************************************************************************************************************************************************************************
+2026-04-19 21:29:12,322 p=2981 u=ubuntu n=ansible | ok: [pay-web02] => (item=git)
+2026-04-19 21:29:12,345 p=2981 u=ubuntu n=ansible | ok: [pay-web01] => (item=git)
+2026-04-19 21:29:12,382 p=2981 u=ubuntu n=ansible | ok: [pay-web03] => (item=git)
+2026-04-19 21:29:13,552 p=2981 u=ubuntu n=ansible | ok: [pay-web02] => (item=wget)
+2026-04-19 21:29:13,604 p=2981 u=ubuntu n=ansible | ok: [pay-web01] => (item=wget)
+2026-04-19 21:29:13,640 p=2981 u=ubuntu n=ansible | ok: [pay-web03] => (item=wget)
+2026-04-19 21:29:14,766 p=2981 u=ubuntu n=ansible | ok: [pay-web02] => (item=zip)
+2026-04-19 21:29:14,841 p=2981 u=ubuntu n=ansible | ok: [pay-web01] => (item=zip)
+2026-04-19 21:29:14,868 p=2981 u=ubuntu n=ansible | ok: [pay-web03] => (item=zip)
+2026-04-19 21:29:15,954 p=2981 u=ubuntu n=ansible | ok: [pay-web02] => (item=unzip)
+2026-04-19 21:29:16,076 p=2981 u=ubuntu n=ansible | ok: [pay-web01] => (item=unzip)
+2026-04-19 21:29:16,113 p=2981 u=ubuntu n=ansible | ok: [pay-web03] => (item=unzip)
+2026-04-19 21:29:16,122 p=2981 u=ubuntu n=ansible | TASK [Deploy custom welcome page] ********************************************************************************************************************************************************************************
+2026-04-19 21:29:17,016 p=2981 u=ubuntu n=ansible | ok: [pay-web02]
+2026-04-19 21:29:17,020 p=2981 u=ubuntu n=ansible | ok: [pay-web01]
+2026-04-19 21:29:17,023 p=2981 u=ubuntu n=ansible | ok: [pay-web03]
+2026-04-19 21:29:17,027 p=2981 u=ubuntu n=ansible | PLAY [Configure pay-api database node] ***************************************************************************************************************************************************************************
+2026-04-19 21:29:17,030 p=2981 u=ubuntu n=ansible | TASK [Gathering Facts] *******************************************************************************************************************************************************************************************
+2026-04-19 21:29:18,995 p=2981 u=ubuntu n=ansible | [WARNING]: Platform linux on host pay-db01 is using the discovered Python interpreter at /usr/bin/python3.10, but future installation of another Python interpreter could change the meaning of that path. See
+https://docs.ansible.com/ansible-core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2026-04-19 21:29:18,995 p=2981 u=ubuntu n=ansible | ok: [pay-db01]
+2026-04-19 21:29:19,000 p=2981 u=ubuntu n=ansible | TASK [Install mariadb] *******************************************************************************************************************************************************************************************
+2026-04-19 21:29:23,878 p=2981 u=ubuntu n=ansible | ok: [pay-db01]
+2026-04-19 21:29:23,885 p=2981 u=ubuntu n=ansible | TASK [Start mariadb and enable on boot] **************************************************************************************************************************************************************************
+2026-04-19 21:29:24,439 p=2981 u=ubuntu n=ansible | ok: [pay-db01]
+2026-04-19 21:29:24,440 p=2981 u=ubuntu n=ansible | PLAY RECAP *******************************************************************************************************************************************************************************************************
+2026-04-19 21:29:24,440 p=2981 u=ubuntu n=ansible | pay-db01                   : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-04-19 21:29:24,441 p=2981 u=ubuntu n=ansible | pay-web01                  : ok=5    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-04-19 21:29:24,441 p=2981 u=ubuntu n=ansible | pay-web02                  : ok=5    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-04-19 21:29:24,441 p=2981 u=ubuntu n=ansible | pay-web03                  : ok=5    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-04-19 21:32:55,198 p=3226 u=ubuntu n=ansible | PLAY [Configure pay-api web nodes] *******************************************************************************************************************************************************************************
+2026-04-19 21:32:55,206 p=3226 u=ubuntu n=ansible | TASK [Gathering Facts] *******************************************************************************************************************************************************************************************
+2026-04-19 21:32:57,392 p=3226 u=ubuntu n=ansible | [WARNING]: Platform linux on host pay-web03 is using the discovered Python interpreter at /usr/bin/python3.10, but future installation of another Python interpreter could change the meaning of that path. See
+https://docs.ansible.com/ansible-core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2026-04-19 21:32:57,392 p=3226 u=ubuntu n=ansible | ok: [pay-web03]
+2026-04-19 21:32:57,395 p=3226 u=ubuntu n=ansible | [WARNING]: Platform linux on host pay-web02 is using the discovered Python interpreter at /usr/bin/python3.10, but future installation of another Python interpreter could change the meaning of that path. See
+https://docs.ansible.com/ansible-core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2026-04-19 21:32:57,395 p=3226 u=ubuntu n=ansible | ok: [pay-web02]
+2026-04-19 21:32:57,421 p=3226 u=ubuntu n=ansible | [WARNING]: Platform linux on host pay-web01 is using the discovered Python interpreter at /usr/bin/python3.10, but future installation of another Python interpreter could change the meaning of that path. See
+https://docs.ansible.com/ansible-core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2026-04-19 21:32:57,421 p=3226 u=ubuntu n=ansible | ok: [pay-web01]
+2026-04-19 21:32:57,427 p=3226 u=ubuntu n=ansible | TASK [Install apache2] *******************************************************************************************************************************************************************************************
+2026-04-19 21:33:00,148 p=3226 u=ubuntu n=ansible | ok: [pay-web02]
+2026-04-19 21:33:00,158 p=3226 u=ubuntu n=ansible | ok: [pay-web01]
+2026-04-19 21:33:00,180 p=3226 u=ubuntu n=ansible | ok: [pay-web03]
+2026-04-19 21:33:00,187 p=3226 u=ubuntu n=ansible | TASK [Start apache2 and enable on boot] **************************************************************************************************************************************************************************
+2026-04-19 21:33:01,013 p=3226 u=ubuntu n=ansible | ok: [pay-web01]
+2026-04-19 21:33:01,019 p=3226 u=ubuntu n=ansible | ok: [pay-web02]
+2026-04-19 21:33:01,028 p=3226 u=ubuntu n=ansible | ok: [pay-web03]
+2026-04-19 21:33:01,034 p=3226 u=ubuntu n=ansible | TASK [Install standard tools] ************************************************************************************************************************************************************************************
+2026-04-19 21:33:02,419 p=3226 u=ubuntu n=ansible | ok: [pay-web02] => (item=git)
+2026-04-19 21:33:02,590 p=3226 u=ubuntu n=ansible | ok: [pay-web03] => (item=git)
+2026-04-19 21:33:02,898 p=3226 u=ubuntu n=ansible | ok: [pay-web01] => (item=git)
+2026-04-19 21:33:03,714 p=3226 u=ubuntu n=ansible | ok: [pay-web02] => (item=wget)
+2026-04-19 21:33:03,937 p=3226 u=ubuntu n=ansible | ok: [pay-web03] => (item=wget)
+2026-04-19 21:33:04,157 p=3226 u=ubuntu n=ansible | ok: [pay-web01] => (item=wget)
+2026-04-19 21:33:04,937 p=3226 u=ubuntu n=ansible | ok: [pay-web02] => (item=zip)
+2026-04-19 21:33:05,185 p=3226 u=ubuntu n=ansible | ok: [pay-web03] => (item=zip)
+2026-04-19 21:33:05,397 p=3226 u=ubuntu n=ansible | ok: [pay-web01] => (item=zip)
+2026-04-19 21:33:06,126 p=3226 u=ubuntu n=ansible | ok: [pay-web02] => (item=unzip)
+2026-04-19 21:33:06,418 p=3226 u=ubuntu n=ansible | ok: [pay-web03] => (item=unzip)
+2026-04-19 21:33:06,615 p=3226 u=ubuntu n=ansible | ok: [pay-web01] => (item=unzip)
+2026-04-19 21:33:06,625 p=3226 u=ubuntu n=ansible | TASK [Deploy custom welcome page] ********************************************************************************************************************************************************************************
+2026-04-19 21:33:07,512 p=3226 u=ubuntu n=ansible | changed: [pay-web01]
+2026-04-19 21:33:07,529 p=3226 u=ubuntu n=ansible | changed: [pay-web02]
+2026-04-19 21:33:07,535 p=3226 u=ubuntu n=ansible | changed: [pay-web03]
+2026-04-19 21:33:07,555 p=3226 u=ubuntu n=ansible | RUNNING HANDLER [Restart apache2] ********************************************************************************************************************************************************************************
+2026-04-19 21:33:08,172 p=3226 u=ubuntu n=ansible | changed: [pay-web01]
+2026-04-19 21:33:08,183 p=3226 u=ubuntu n=ansible | changed: [pay-web03]
+2026-04-19 21:33:08,193 p=3226 u=ubuntu n=ansible | changed: [pay-web02]
+2026-04-19 21:33:08,197 p=3226 u=ubuntu n=ansible | PLAY [Configure pay-api database node] ***************************************************************************************************************************************************************************
+2026-04-19 21:33:08,200 p=3226 u=ubuntu n=ansible | TASK [Gathering Facts] *******************************************************************************************************************************************************************************************
+2026-04-19 21:33:10,097 p=3226 u=ubuntu n=ansible | [WARNING]: Platform linux on host pay-db01 is using the discovered Python interpreter at /usr/bin/python3.10, but future installation of another Python interpreter could change the meaning of that path. See
+https://docs.ansible.com/ansible-core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2026-04-19 21:33:10,098 p=3226 u=ubuntu n=ansible | ok: [pay-db01]
+2026-04-19 21:33:10,103 p=3226 u=ubuntu n=ansible | TASK [Install mariadb] *******************************************************************************************************************************************************************************************
+2026-04-19 21:33:12,524 p=3226 u=ubuntu n=ansible | ok: [pay-db01]
+2026-04-19 21:33:12,531 p=3226 u=ubuntu n=ansible | TASK [Start mariadb and enable on boot] **************************************************************************************************************************************************************************
+2026-04-19 21:33:12,980 p=3226 u=ubuntu n=ansible | ok: [pay-db01]
+2026-04-19 21:33:12,981 p=3226 u=ubuntu n=ansible | PLAY RECAP *******************************************************************************************************************************************************************************************************
+2026-04-19 21:33:12,982 p=3226 u=ubuntu n=ansible | pay-db01                   : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-04-19 21:33:12,982 p=3226 u=ubuntu n=ansible | pay-web01                  : ok=6    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-04-19 21:33:12,982 p=3226 u=ubuntu n=ansible | pay-web02                  : ok=6    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-04-19 21:33:12,982 p=3226 u=ubuntu n=ansible | pay-web03                  : ok=6    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-04-19 21:44:35,628 p=3515 u=ubuntu n=ansible | playbook: pay-api.yaml
+2026-04-19 21:45:05,062 p=3517 u=ubuntu n=ansible | PLAY [Set up pay-api web nodes] ***********************************************************************
+2026-04-19 21:45:05,071 p=3517 u=ubuntu n=ansible | TASK [Gathering Facts] ********************************************************************************
+2026-04-19 21:45:07,050 p=3517 u=ubuntu n=ansible | [WARNING]: Platform linux on host pay-web02 is using the discovered Python interpreter at
+/usr/bin/python3.10, but future installation of another Python interpreter could change the meaning of
+that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2026-04-19 21:45:07,051 p=3517 u=ubuntu n=ansible | ok: [pay-web02]
+2026-04-19 21:45:07,061 p=3517 u=ubuntu n=ansible | [WARNING]: Platform linux on host pay-web01 is using the discovered Python interpreter at
+/usr/bin/python3.10, but future installation of another Python interpreter could change the meaning of
+that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2026-04-19 21:45:07,062 p=3517 u=ubuntu n=ansible | ok: [pay-web01]
+2026-04-19 21:45:07,064 p=3517 u=ubuntu n=ansible | [WARNING]: Platform linux on host pay-web03 is using the discovered Python interpreter at
+/usr/bin/python3.10, but future installation of another Python interpreter could change the meaning of
+that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2026-04-19 21:45:07,064 p=3517 u=ubuntu n=ansible | ok: [pay-web03]
+2026-04-19 21:45:07,070 p=3517 u=ubuntu n=ansible | TASK [pay-api : Install apache2] **********************************************************************
+2026-04-19 21:45:09,695 p=3517 u=ubuntu n=ansible | ok: [pay-web02]
+2026-04-19 21:45:09,745 p=3517 u=ubuntu n=ansible | ok: [pay-web01]
+2026-04-19 21:45:09,745 p=3517 u=ubuntu n=ansible | ok: [pay-web03]
+2026-04-19 21:45:09,752 p=3517 u=ubuntu n=ansible | TASK [pay-api : Start apache2 and enable on boot] *****************************************************
+2026-04-19 21:45:10,561 p=3517 u=ubuntu n=ansible | ok: [pay-web02]
+2026-04-19 21:45:10,567 p=3517 u=ubuntu n=ansible | ok: [pay-web01]
+2026-04-19 21:45:10,573 p=3517 u=ubuntu n=ansible | ok: [pay-web03]
+2026-04-19 21:45:10,579 p=3517 u=ubuntu n=ansible | TASK [pay-api : Install standard tools] ***************************************************************
+2026-04-19 21:45:11,853 p=3517 u=ubuntu n=ansible | ok: [pay-web01] => (item=git)
+2026-04-19 21:45:11,866 p=3517 u=ubuntu n=ansible | ok: [pay-web02] => (item=git)
+2026-04-19 21:45:11,889 p=3517 u=ubuntu n=ansible | ok: [pay-web03] => (item=git)
+2026-04-19 21:45:13,082 p=3517 u=ubuntu n=ansible | ok: [pay-web02] => (item=wget)
+2026-04-19 21:45:13,110 p=3517 u=ubuntu n=ansible | ok: [pay-web01] => (item=wget)
+2026-04-19 21:45:13,124 p=3517 u=ubuntu n=ansible | ok: [pay-web03] => (item=wget)
+2026-04-19 21:45:14,302 p=3517 u=ubuntu n=ansible | ok: [pay-web02] => (item=zip)
+2026-04-19 21:45:14,347 p=3517 u=ubuntu n=ansible | ok: [pay-web01] => (item=zip)
+2026-04-19 21:45:14,373 p=3517 u=ubuntu n=ansible | ok: [pay-web03] => (item=zip)
+2026-04-19 21:45:15,510 p=3517 u=ubuntu n=ansible | ok: [pay-web02] => (item=unzip)
+2026-04-19 21:45:15,614 p=3517 u=ubuntu n=ansible | ok: [pay-web01] => (item=unzip)
+2026-04-19 21:45:15,635 p=3517 u=ubuntu n=ansible | ok: [pay-web03] => (item=unzip)
+2026-04-19 21:45:15,645 p=3517 u=ubuntu n=ansible | TASK [pay-api : Deploy custom welcome page] ***********************************************************
+2026-04-19 21:45:16,492 p=3517 u=ubuntu n=ansible | ok: [pay-web02]
+2026-04-19 21:45:16,500 p=3517 u=ubuntu n=ansible | ok: [pay-web01]
+2026-04-19 21:45:16,500 p=3517 u=ubuntu n=ansible | ok: [pay-web03]
+2026-04-19 21:45:16,518 p=3517 u=ubuntu n=ansible | PLAY [Set up pay-api database node] *******************************************************************
+2026-04-19 21:45:16,521 p=3517 u=ubuntu n=ansible | TASK [Gathering Facts] ********************************************************************************
+2026-04-19 21:45:18,148 p=3517 u=ubuntu n=ansible | [WARNING]: Platform linux on host pay-db01 is using the discovered Python interpreter at
+/usr/bin/python3.10, but future installation of another Python interpreter could change the meaning of
+that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2026-04-19 21:45:18,148 p=3517 u=ubuntu n=ansible | ok: [pay-db01]
+2026-04-19 21:45:18,153 p=3517 u=ubuntu n=ansible | TASK [Install mariadb] ********************************************************************************
+2026-04-19 21:45:20,540 p=3517 u=ubuntu n=ansible | ok: [pay-db01]
+2026-04-19 21:45:20,547 p=3517 u=ubuntu n=ansible | TASK [Start mariadb and enable on boot] ***************************************************************
+2026-04-19 21:45:20,999 p=3517 u=ubuntu n=ansible | ok: [pay-db01]
+2026-04-19 21:45:21,000 p=3517 u=ubuntu n=ansible | PLAY RECAP ********************************************************************************************
+2026-04-19 21:45:21,001 p=3517 u=ubuntu n=ansible | pay-db01                   : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-04-19 21:45:21,001 p=3517 u=ubuntu n=ansible | pay-web01                  : ok=5    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-04-19 21:45:21,001 p=3517 u=ubuntu n=ansible | pay-web02                  : ok=5    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-04-19 21:45:21,001 p=3517 u=ubuntu n=ansible | pay-web03                  : ok=5    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
